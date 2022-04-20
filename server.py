@@ -5,24 +5,24 @@ from random import choice
 
 app = Flask(__name__)
 
-# WORDS = [
-#   'strawberry',
-#   'orange',
-#   'apple',
-#   'banana',
-#   'pineapple',
-#   'kiwi',
-#   'peach',
-#   'pecan',
-#   'eggplant',
-#   'durian',
-#   'peanut',
-#   'chocolate',
-# ];
+WORDS = [
+  'strawberry',
+  'orange',
+  'apple',
+  'banana',
+  'pineapple',
+  'kiwi',
+  'peach',
+  'pecan',
+  'eggplant',
+  'durian',
+  'peanut',
+  'chocolate',
+];
 
-# @app.route('/words.json')
-# def get_word():
-#     return {"word": choice(WORDS)}
+@app.route('/random-words.json')
+def get_word():
+    return {"word": choice(WORDS)}
     
 
 @app.route("/")
